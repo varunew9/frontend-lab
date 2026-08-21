@@ -1,5 +1,5 @@
 import { Heading, Section } from "../../../components/ui";
-import ProfileCardList from "../../../features/profileCardGenrator/component/ProfileCardList";
+import ProfileCardList from "../../../features/profileCardGenerator/component/ProfileCardList";
 
 export function ProfileCardGenratorPage() {
   return (
