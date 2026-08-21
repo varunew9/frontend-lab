@@ -1,0 +1,61 @@
+// ========================================
+// Breakpoints
+// ========================================
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+
+// ========================================
+// Grid
+// ========================================
+
+$grid-columns: 12;
+
+// Bootstrap default gutter = 1.5rem = 24px
+$grid-gutter-x: 24px;
+$grid-gutter-y: 0;
+
+
+// ========================================
+// Container
+// ========================================
+
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-xxl: 1320px;
+
+
+// ========================================
+// Spacing
+// ========================================
+
+$spacing: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 16px,
+  4: 24px,
+  5: 32px,
+  6: 48px,
+);
+
+
+// ========================================
+// Z-index
+// ========================================
+
+$z-index: (
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modal-backdrop: 1040,
+  modal: 1050,
+  popover: 1070,
+  tooltip: 1080,
+);

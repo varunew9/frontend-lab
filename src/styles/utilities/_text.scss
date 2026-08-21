@@ -1,0 +1,83 @@
+// ========================================
+// Alignment
+// ========================================
+
+.text-start {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: right;
+}
+
+// ========================================
+// Transform
+// ========================================
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// ========================================
+// Weight
+// ========================================
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+// ========================================
+// Theme colors
+// ========================================
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-white {
+  color: #fff;
+}
+
+// ========================================
+// Text wrapping
+// ========================================
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-break {
+  overflow-wrap: break-word;
+}

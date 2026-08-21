@@ -1,0 +1,140 @@
+@use "sass:math";
+@use "../abstracts/variables" as *;
+
+// ========================================
+// Row
+// ========================================
+
+.row {
+  --gutter-x: #{$grid-gutter-x};
+  --gutter-y: #{$grid-gutter-y};
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(var(--gutter-y) * -1);
+  margin-right: calc(var(--gutter-x) * -0.5);
+  margin-left: calc(var(--gutter-x) * -0.5);
+}
+
+// ========================================
+// Row direct children
+// ========================================
+
+.row > * {
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+
+  width: 100%;
+  max-width: 100%;
+
+  padding-right: calc(var(--gutter-x) * 0.5);
+  padding-left: calc(var(--gutter-x) * 0.5);
+
+  margin-top: var(--gutter-y);
+}
+
+// ========================================
+// Equal width column
+// ========================================
+
+.col {
+  flex: 1 0 0%;
+}
+
+// ========================================
+// Base columns
+// ========================================
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: math.percentage(math.div($i, $grid-columns));
+  }
+}
+
+// ========================================
+// Small ≥ 576px
+// ========================================
+
+@media (min-width: $breakpoint-sm) {
+  .col-sm {
+    flex: 1 0 0%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+      flex: 0 0 auto;
+      width: math.percentage(math.div($i, $grid-columns));
+    }
+  }
+}
+
+// ========================================
+// Medium ≥ 768px
+// ========================================
+
+@media (min-width: $breakpoint-md) {
+  .col-md {
+    flex: 1 0 0%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      flex: 0 0 auto;
+      width: math.percentage(math.div($i, $grid-columns));
+    }
+  }
+}
+
+// ========================================
+// Large ≥ 992px
+// ========================================
+
+@media (min-width: $breakpoint-lg) {
+  .col-lg {
+    flex: 1 0 0%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+      flex: 0 0 auto;
+      width: math.percentage(math.div($i, $grid-columns));
+    }
+  }
+}
+
+// ========================================
+// Extra Large ≥ 1200px
+// ========================================
+
+@media (min-width: $breakpoint-xl) {
+  .col-xl {
+    flex: 1 0 0%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+      flex: 0 0 auto;
+      width: math.percentage(math.div($i, $grid-columns));
+    }
+  }
+}
+
+// ========================================
+// Extra Extra Large ≥ 1400px
+// ========================================
+
+@media (min-width: $breakpoint-xxl) {
+  .col-xxl {
+    flex: 1 0 0%;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-xxl-#{$i} {
+      flex: 0 0 auto;
+      width: math.percentage(math.div($i, $grid-columns));
+    }
+  }
+}

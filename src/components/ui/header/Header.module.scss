@@ -1,0 +1,636 @@
+.header {
+  position: relative;
+  z-index: 1050;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nbar {
+  position: fixed;
+  inset: 0 0 auto;
+
+  z-index: 1050;
+
+  height: var(--navbar-height);
+
+  display: flex;
+  align-items: center;
+
+  // background: var(--navbar-bg);
+
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid var(--border);
+
+  box-shadow: var(--shadow-lg);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =========================================================
+   NAVBAR INNER
+========================================================= */
+
+.navbarInner {
+  width: 100%;
+  min-height: var(--navbar-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  color: var(--text);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+  }
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  margin-inline: auto;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 8px 13px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+
+  &:hover {
+    color: var(--text);
+
+    background: var(--surface-hover);
+  }
+}
+
+.chevron {
+  width: 15px;
+  height: 15px;
+
+  transition: transform 0.2s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   FEATURES DROPDOWN
+========================================================= */
+
+.dropdown {
+  position: relative;
+}
+
+/* Desktop mega menu */
+
+.dropdownMenu {
+  position: absolute;
+
+  top: calc(100% + 14px);
+  left: 50%;
+
+  width: min(760px, calc(100vw - 40px));
+
+  padding: 14px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 6px;
+
+  background: var(--dropdown-bg);
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  box-shadow: var(--dropdown-shadow);
+
+  transform: translateX(-50%) translateY(-8px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: -6px;
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    background: var(--surface);
+
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+.dropdownOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  background: var(--surface);
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =========================================================
+   FEATURE ITEM
+========================================================= */
+
+.featureItem {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 14px 10px;
+
+  border-radius: 10px;
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background: var(--surface-hover);
+
+    transform: translateY(-1px);
+  }
+}
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.featureIcon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  color: var(--primary);
+
+  background: var(--primary-soft);
+
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   FEATURE CONTENT
+========================================================= */
+
+.featureContent {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  strong {
+    color: var(--text);
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+  }
+
+  span {
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.loginButton,
+.startedButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menuButton {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-strong);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+  }
+}
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 991px) {
+  .navbarInner {
+    gap: 12px;
+  }
+
+  /* -----------------------------------------
+     Mobile Navigation
+  ----------------------------------------- */
+
+  .navigation {
+    position: fixed;
+
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 14px 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    background: var(--surface);
+
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: var(--mobile-menu-shadow);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .navigationOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  /* -----------------------------------------
+     Mobile Links
+  ----------------------------------------- */
+
+  .navLink {
+    width: 100%;
+
+    justify-content: space-between;
+
+    padding: 14px 4px;
+
+    border-radius: 0;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 0.9rem;
+  }
+
+  /* -----------------------------------------
+     Dropdown
+  ----------------------------------------- */
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdownMenu {
+    position: static;
+
+    width: 100%;
+
+    max-height: 0;
+
+    padding: 0 0 0 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    background: transparent;
+
+    border: 0;
+
+    border-bottom: 1px solid var(--border);
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    overflow: hidden;
+
+    transform: none;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      max-height 0.3s ease,
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .dropdownOpen {
+    max-height: 600px;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: none;
+  }
+
+  /* -----------------------------------------
+     Feature Items
+  ----------------------------------------- */
+
+  .featureItem {
+    width: 100%;
+
+    padding: 10px 6px;
+
+    border-radius: 8px;
+
+    gap: 10px;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .featureIcon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .featureContent {
+    strong {
+      font-size: 0.82rem;
+    }
+
+    span {
+      font-size: 0.7rem;
+    }
+  }
+
+  /* -----------------------------------------
+     Hide Desktop Actions
+  ----------------------------------------- */
+
+  .loginButton,
+  .startedButton {
+    display: none;
+  }
+
+  /* -----------------------------------------
+     Hamburger
+  ----------------------------------------- */
+
+  .menuButton {
+    display: flex;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .navbarInner {
+    gap: 10px;
+  }
+
+  /* Hide logo text */
+
+  .brand > span {
+    display: none;
+  }
+
+  .logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .menuButton {
+    width: 38px;
+    height: 38px;
+  }
+
+  .navigation {
+    padding: 12px 16px 18px;
+  }
+
+  .navLink {
+    padding: 13px 4px;
+  }
+
+  .featureItem {
+    padding: 9px 6px;
+  }
+
+  .featureIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .featureContent {
+    strong {
+      font-size: 0.8rem;
+    }
+
+    span {
+      font-size: 0.68rem;
+    }
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .menuButton {
+    width: 36px;
+    height: 36px;
+  }
+}

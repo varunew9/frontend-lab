@@ -1,0 +1,997 @@
+.home {
+  //   width: 100%;
+  //   overflow: hidden;
+
+  //   background: var(--bg);
+  //   color: var(--text);
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section {
+  position: relative;
+
+  width: 100%;
+
+  padding-block: 110px;
+
+  background: var(--bg);
+
+  color: var(--text);
+}
+
+.sectionHeader {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 14px;
+
+  color: var(--primary);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+
+    width: 22px;
+    height: 2px;
+
+    background: var(--gradient);
+
+    border-radius: 10px;
+  }
+
+  &::after {
+    content: "";
+
+    width: 22px;
+    height: 2px;
+
+    background: var(--gradient);
+
+    border-radius: 10px;
+  }
+}
+
+.sectionTitle {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+
+  span {
+    background: var(--gradient);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.sectionSubtitle {
+  max-width: 760px;
+
+  margin: 18px auto 0;
+
+  color: var(--text-secondary);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: calc(90vh - var(--navbar-height));
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding-top: calc(var(--navbar-height) + 60px);
+  padding-bottom: 90px;
+
+  overflow: hidden;
+
+  background: var(--bg);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 950px;
+
+  text-align: center;
+  margin-inline: auto;
+}
+
+.heroTitle {
+  margin: 0 0 24px;
+
+  color: var(--text);
+
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+
+  span {
+    display: block;
+
+    background: var(--gradient);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.heroDescription {
+  max-width: 850px;
+
+  margin: 0 auto 14px;
+
+  color: var(--text-secondary);
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.heroActions {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+}
+
+.playIcon {
+  font-size: 0.8rem;
+}
+
+.trusted {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  margin-top: 65px;
+
+  text-align: center;
+}
+
+.trustedLabel {
+  margin: 0 0 16px;
+
+  color: var(--text-muted);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.techList {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px 24px;
+
+  flex-wrap: wrap;
+}
+
+.techItem {
+  color: var(--text-secondary);
+
+  opacity: 0.5;
+
+  font-size: 0.85rem;
+  //   font-weight: 600;
+
+  filter: grayscale(1);
+
+  transition:
+    opacity 0.25s ease,
+    color 0.25s ease,
+    filter 0.25s ease;
+
+  &:hover {
+    color: var(--text);
+
+    opacity: 1;
+
+    filter: none;
+  }
+}
+
+/* =========================================================
+   AURORA
+========================================================= */
+
+.auroraA,
+.auroraB {
+  position: absolute;
+
+  z-index: 0;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+.auroraA {
+  width: 550px;
+  height: 550px;
+
+  top: -200px;
+  left: -180px;
+
+  background: radial-gradient(circle, color-mix(in srgb, var(--purple) 25%, transparent), transparent 70%);
+}
+
+.auroraB {
+  width: 500px;
+  height: 500px;
+
+  right: -180px;
+  bottom: -180px;
+
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%);
+}
+
+/* =========================================================
+   PROOF / STATS
+========================================================= */
+
+.proof {
+  position: relative;
+
+  padding-block: 65px;
+
+  background: var(--bg-2);
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.statsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+.stat {
+  padding: 15px;
+
+  text-align: center;
+}
+
+.statNumber {
+  color: var(--text);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+
+  line-height: 1;
+
+  background: var(--gradient);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.statLabel {
+  margin-top: 10px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.techTicker {
+  overflow: hidden;
+  margin-top: 28px;
+}
+
+.techTrack {
+  display: flex;
+  width: max-content;
+  animation: lscr 18s linear infinite;
+}
+
+.techBadge {
+  padding: 3px 16px;
+
+  border: 1px solid transparent;
+
+  border-radius: 999px;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+
+  display: flex;
+  width: max-content;
+  color: var(--text-muted);
+
+  &:hover {
+    color: var(--text);
+
+    border-color: var(--border-strong);
+
+    background: var(--bg-3);
+  }
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cardsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.skillCard,
+.workflowCard,
+.journeyCard {
+  position: relative;
+
+  height: 100%;
+
+  padding: 28px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow-card);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--border-strong);
+
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+.skillIcon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background: var(--accent-soft);
+
+  border: 1px solid var(--border-strong);
+
+  border-radius: 14px;
+
+  color: var(--primary);
+
+  font-size: 1.1rem;
+}
+
+.cardTitle {
+  margin: 0 0 12px;
+
+  color: var(--text);
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+.cardDescription {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 0.875rem;
+
+  line-height: 1.7;
+}
+
+.tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-top: 20px;
+
+  padding: 6px 12px;
+
+  background: var(--accent-soft);
+
+  border: 1px solid var(--border);
+
+  border-radius: 999px;
+
+  color: var(--primary);
+
+  font-size: 0.7rem;
+  //   font-weight: 600;
+}
+
+/* =========================================================
+   WORKFLOW
+========================================================= */
+
+.workflowGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.workflowCard {
+  padding: 25px;
+}
+
+.workflowNumber {
+  margin-bottom: 20px;
+
+  color: var(--primary);
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  line-height: 1;
+
+  opacity: 0.8;
+}
+
+/* =========================================================
+   TECH STACK
+========================================================= */
+
+.techStackSection {
+  background: var(--bg-2);
+}
+
+.stackPanel {
+  position: relative;
+
+  padding: 35px 20px 20px;
+
+  background: var(--surface);
+
+  border: 1px dashed var(--border);
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow-card);
+}
+
+.stackPanelTitle {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 7px 18px;
+
+  background: var(--gradient);
+
+  border-radius: 999px;
+
+  color: var(--text-on-primary);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.stackGrid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.subPanel {
+  padding: 20px;
+
+  background: var(--bg-2);
+
+  border: 1px dashed var(--border);
+
+  border-radius: 12px;
+
+  &:first-child {
+    grid-row: span 2;
+  }
+}
+
+.subPanelTitle {
+  width: fit-content;
+
+  margin: -35px auto 25px;
+
+  padding: 6px 16px;
+
+  background: var(--gradient);
+
+  border-radius: 999px;
+
+  color: var(--text-on-primary);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.logoGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+  gap: 10px;
+  justify-content: center;
+}
+
+.stackItem {
+  min-height: 75px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 10px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.72rem;
+
+  text-align: center;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+  & span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Adjust to your needs */
+    display: block;
+    cursor: default;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+
+    color: var(--text);
+
+    background: var(--bg-3);
+
+    border-color: var(--border-strong);
+  }
+}
+
+.stackIcon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--accent-soft);
+
+  border-radius: 8px;
+
+  color: var(--primary);
+
+  font-size: 0.75rem;
+}
+
+/* =========================================================
+   LEARNING JOURNEY
+========================================================= */
+
+.journeyGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.journeyCard {
+  padding: 28px;
+
+  text-align: center;
+}
+
+.journeyNumber {
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 20px;
+
+  background: var(--accent-soft);
+
+  border: 1px solid var(--border-strong);
+
+  border-radius: 50%;
+
+  color: var(--primary);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-block: 120px;
+
+  background: var(--bg-3);
+
+  text-align: center;
+}
+
+.ctaGlow {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 650px;
+  height: 400px;
+
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--purple) 20%, transparent), transparent 70%);
+
+  pointer-events: none;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 1;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+.ctaBadge {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 25px;
+
+  padding: 7px 14px;
+
+  background: var(--accent-soft);
+
+  border: 1px solid var(--border-strong);
+
+  border-radius: 999px;
+
+  color: var(--primary);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.ctaTitle {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.03em;
+
+  span {
+    background: var(--gradient);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.ctaDescription {
+  max-width: 650px;
+
+  margin: 24px auto 30px;
+
+  color: var(--text-secondary);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+.ctaTags {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 35px;
+}
+
+.ctaActions {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workflowGrid,
+  .journeyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stackGrid {
+    grid-template-columns: 1fr;
+    gap: 40px 20px;
+  }
+
+  .subPanel:first-child {
+    grid-row: auto;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 80px;
+  }
+
+  .hero {
+    min-height: auto;
+
+    padding-top: calc(var(--navbar-height) + 45px);
+    padding-bottom: 70px;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.3rem, 10vw, 4rem);
+  }
+
+  .heroDescription {
+    font-size: 0.92rem;
+  }
+
+  .trusted {
+    margin-top: 45px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 45px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cta {
+    padding-block: 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding-inline: 20px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 0.7rem;
+  }
+
+  .workflowGrid,
+  .journeyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(3, 74px);
+  }
+
+  .stackPanel {
+    padding-inline: 12px;
+    padding-block-start: 55px;
+  }
+
+  .subPanel {
+    padding: 15px 10px;
+  }
+
+  .heroActions,
+  .ctaActions {
+    width: 100%;
+
+    > * {
+      width: 100%;
+    }
+  }
+
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+
+  .auroraA {
+    width: 300px;
+    height: 300px;
+  }
+
+  .auroraB {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@keyframes lscr {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

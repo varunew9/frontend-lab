@@ -1,0 +1,256 @@
+.section {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding-block: 120px;
+
+  color: var(--text);
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 90vh;
+  width: 100%;
+
+  padding-top: var(--navbar-height);
+
+  overflow: hidden;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+}
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.section__header {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  margin-bottom: 80px;
+
+  text-align: center;
+}
+
+.section__subtitle {
+  margin-bottom: 12px;
+
+  color: var(--text-muted);
+
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.section__title {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+
+  text-transform: uppercase;
+}
+
+.section__titleHighlight {
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ========================================
+   STRIPED BACKGROUND
+======================================== */
+
+.section__stripped {
+  position: absolute;
+  z-index: -1;
+
+  inset: 0;
+
+  background-image: url("/stripe.svg");
+  background-repeat: repeat;
+  background-size: 24px 24px;
+
+  opacity: 0.025;
+
+  pointer-events: none;
+}
+
+/*
+  Keep the pattern subtle across all themes.
+  Since the underlying background changes,
+  we don't need a separate light-theme class.
+*/
+
+[data-theme="light"] {
+  .section__stripped {
+    opacity: 0.04;
+  }
+}
+
+[data-theme="cyberpunk"] {
+  .section__stripped {
+    opacity: 0.05;
+  }
+}
+
+[data-theme="forest"] {
+  .section__stripped {
+    opacity: 0.035;
+  }
+}
+
+/* ========================================
+   AURORA / BACKGROUND GLOW
+======================================== */
+
+.aur {
+  position: absolute;
+  z-index: 0;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+/*
+  Primary theme glow.
+  Uses --primary so every theme gets
+  its own visual identity.
+*/
+
+.aur-a {
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--primary) 22%, transparent),
+    transparent 70%
+  );
+
+  top: -150px;
+  left: -150px;
+}
+
+/*
+  Secondary theme glow.
+  Uses --secondary instead of hardcoded blue.
+*/
+
+.aur-b {
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--secondary) 18%, transparent),
+    transparent 70%
+  );
+
+  right: -120px;
+  bottom: -100px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px var(--section-padding-x, 24px);
+  }
+
+  .hero {
+    min-height: 80vh;
+
+    padding-top: var(--navbar-height);
+  }
+
+  .section__header {
+    margin-bottom: 50px;
+  }
+
+  .section__subtitle {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+  }
+
+  .section__title {
+    font-size: 34px;
+  }
+
+  .aur-a {
+    width: 400px;
+    height: 400px;
+  }
+
+  .aur-b {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .section__title {
+    font-size: 28px;
+  }
+
+  .aur-a {
+    width: 300px;
+    height: 300px;
+  }
+
+  .aur-b {
+    width: 280px;
+    height: 280px;
+  }
+}

@@ -1,0 +1,96 @@
+// ========================================
+// CSS Grid 2D
+// ========================================
+
+.grid {
+  display: grid;
+}
+
+
+// ========================================
+// Grid Columns
+// ========================================
+
+@for $i from 1 through 12 {
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat(
+      #{$i},
+      minmax(0, 1fr)
+    );
+  }
+}
+
+
+// ========================================
+// Grid Rows
+// ========================================
+
+@for $i from 1 through 6 {
+  .grid-rows-#{$i} {
+    grid-template-rows: repeat(
+      #{$i},
+      minmax(0, 1fr)
+    );
+  }
+}
+
+
+// ========================================
+// Grid Gap
+// ========================================
+
+.grid-gap-0 {
+  gap: 0;
+}
+
+.grid-gap-1 {
+  gap: 4px;
+}
+
+.grid-gap-2 {
+  gap: 8px;
+}
+
+.grid-gap-3 {
+  gap: 16px;
+}
+
+.grid-gap-4 {
+  gap: 24px;
+}
+
+.grid-gap-5 {
+  gap: 32px;
+}
+
+.grid-gap-6 {
+  gap: 48px;
+}
+
+
+// ========================================
+// Auto Fit
+// ========================================
+
+.grid-auto-fit {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+}
+
+
+// ========================================
+// Auto Fill
+// ========================================
+
+.grid-auto-fill {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  );
+}
