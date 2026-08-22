@@ -670,7 +670,7 @@
   display: grid;
   place-items: center;
 
-  background: var(--accent-soft);
+  // background: var(--accent-soft);
 
   border-radius: 8px;
 
@@ -778,7 +778,7 @@
   color: var(--primary);
 
   font-size: 0.75rem;
-  font-weight: 700;
+  // font-weight: 700;
 
   letter-spacing: 0.08em;
 
@@ -793,9 +793,9 @@
 
   border-radius: 50%;
 
-  background: var(--accent);
+  background: var(--primary);
 
-  box-shadow: 0 0 10px var(--accent);
+  box-shadow: 0 0 10px var(--primary);
 }
 
 .ctaTitle {

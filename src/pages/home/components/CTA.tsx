@@ -1,12 +1,16 @@
+import {CircleArrowRight,Telescope} from 'lucide-react'
+import { useNavigate } from "react-router-dom";
 import { Button, Heading, Section } from "../../../components/ui";
 import styles from "../Home.module.scss";
 
 const technologies = ["React", "TypeScript", "JavaScript", "Redux", "Redux Toolkit", "Zustand", "TanStack Query", "React Hook Form", "Zod", "Tailwind CSS", "Sass", "HTML5", "CSS3"];
 
 export function CTA() {
+  const navigate = useNavigate();
   return (
     <Section id="cta" className={`${styles.cta} text-center`}>
       {/* <div className={styles.ctaGlow} /> */}
+      <div className="aur aur-a" style={{ top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}></div>
 
       <div className={styles.ctaContent}>
         <span className={styles.ctaBadge}>
@@ -29,15 +33,20 @@ export function CTA() {
         </div>
 
         <div className={styles.ctaActions}>
-          <Button variant="primary" className="px-4 py-3">
+          <Button variant="primary" className="px-4 py-3" onClick={() => navigate("/counter")}>
             Start Learning
-            <i className="fa-solid fa-arrow-right" />
+            <CircleArrowRight />
           </Button>
 
-          <Button variant="outline" className="px-4 py-3">
-            <i className="fa-regular fa-comment-dots" />
-            Explore Projects
+          <Button variant="outline" className="px-4 py-3" onClick={() => navigate("/features")}>
+            <Telescope />
+            Explore Mini Projects
           </Button>
+
+          {/* <Button variant="outline" className="px-4 py-3" onClick={() => navigate("/projects")}>
+            <Telescope />
+            Explore Projects
+          </Button> */}
         </div>
       </div>
     </Section>

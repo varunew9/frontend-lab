@@ -45,7 +45,7 @@ function Header() {
                     const Icon = feature.icon;
 
                     return (
-                      <Link key={feature.path} to={feature.path} className={classes.featureItem} onClick={closeMenu}>
+                      <Link key={feature.path} to={`/features${feature.path}`} className={`${classes.featureItem} ${feature.status === "planned" ? classes.opacity50 : feature.status === "in-progress" ? classes.opacity75 : ""}`} onClick={closeMenu}>
                         <div className={classes.featureIcon}>
                           <Icon size={20} />
                         </div>
@@ -71,10 +71,10 @@ function Header() {
                 </div>
               </div>
 
-              <Link to="/counter" className={classes.navLink} onClick={closeMenu}>
+              <Link to="/features/counter" className={classes.navLink} onClick={closeMenu}>
                 Counter
               </Link>
-              <Link to="/theme-changer" className={classes.navLink} onClick={closeMenu}>
+              <Link to="/features/theme-changer" className={classes.navLink} onClick={closeMenu}>
                 Theme Changer
               </Link>
               <Link to="#faq" className={classes.navLink} onClick={closeMenu}>

@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { Button, Heading, Section } from "../../../components/ui";
 import styles from "../Home.module.scss";
 
 const technologies = ["HTML5", "CSS3", "Sass", "JavaScript", "TypeScript", "React", "Redux", "Redux Toolkit", "Zustand", "TanStack Query"];
 
 export function Hero() {
+  const navigate = useNavigate();
   return (
     <Section id="hero" className={styles.hero}>
       <div className={styles.heroContent}>
@@ -20,7 +22,7 @@ export function Hero() {
         <p className={styles.heroDescription}>Learn by building real-world projects that combine UI development, state management, API integration, form validation, responsive design, performance optimization, and modern frontend architecture.</p>
 
         <div className={styles.heroActions}>
-          <Button variant="primary" className="px-4 py-3">
+          <Button variant="primary" className="px-4 py-3" onClick={() => navigate("/counter")}>
             Start from Basics
           </Button>
 

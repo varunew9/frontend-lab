@@ -1,5 +1,10 @@
 export { Home } from "./home/Home";
-export { CounterPage } from "./projects/counter/CounterPage";
-export { DigitalClockPage } from "./projects/digitalClock/DigitalClockPage";
-export { ProfileCardGenratorPage } from "./projects/profileCardGenrator/ProfileCardGenratorPage";
-export { ThemeChangerPage } from "./projects/themeChanger/ThemeChangerPage";
+export { CounterPage } from "./features/counter/CounterPage";
+export { DigitalClockPage } from "./features/digitalClock/DigitalClockPage";
+export { ProfileCardGenratorPage } from "./features/profileCardGenrator/ProfileCardGenratorPage";
+export { ThemeChangerPage } from "./features/themeChanger/ThemeChangerPage";
+export { Features } from "./features/Features";
+export { CalculatorPage } from "./features/calculator/CalculatorPage";
+export { FeaturesLayout } from "./features/FeaturesLayout";
+export { ComingSoon } from "./comingSoon/ComingSoon";
+export { ShoppingCart } from "./features/shoppingCart/ShoppingCart";

@@ -162,11 +162,7 @@
   width: 600px;
   height: 600px;
 
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--primary) 22%, transparent),
-    transparent 70%
-  );
+  background: radial-gradient(circle, color-mix(in srgb, var(--primary) 22%, transparent), transparent 70%);
 
   top: -150px;
   left: -150px;
@@ -181,11 +177,7 @@
   width: 500px;
   height: 500px;
 
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--secondary) 18%, transparent),
-    transparent 70%
-  );
+  background: radial-gradient(circle, color-mix(in srgb, var(--secondary) 18%, transparent), transparent 70%);
 
   right: -120px;
   bottom: -100px;

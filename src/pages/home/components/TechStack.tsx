@@ -90,7 +90,7 @@ export function TechStack() {
                   return (
                     <div key={itemKey} className={styles.stackItem} title={itemData.label}>
                       <div className={styles.stackIcon}>
-                        <IconComponent size={20} />
+                        <IconComponent size={24} />
                       </div>
                       <span>{itemData.label}</span>
                     </div>

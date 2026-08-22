@@ -60,7 +60,7 @@ export function Skills() {
           return (
             <article key={skill.title} className={styles.skillCard}>
               <div className={styles.skillIcon}>
-                <Icon size={16} />
+                <Icon size={30} />
               </div>
 
               <Heading element="h3" className={styles.cardTitle}>

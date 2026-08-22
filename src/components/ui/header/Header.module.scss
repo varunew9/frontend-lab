@@ -165,33 +165,21 @@
 
 .dropdownMenu {
   position: absolute;
-
   top: calc(100% + 14px);
   left: 50%;
-
-  width: min(760px, calc(100vw - 40px));
-
-  padding: 14px;
-
+  width: min(840px, 100vw - 40px);
+  padding: 10px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 6px;
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
   background: var(--dropdown-bg);
-
   border: 1px solid var(--border);
-
   border-radius: 16px;
-
   box-shadow: var(--dropdown-shadow);
-
   transform: translateX(-50%) translateY(-8px);
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transition:
     opacity 0.2s ease,
     visibility 0.2s ease,
@@ -377,7 +365,7 @@
    TABLET / MOBILE
 ========================================================= */
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .navbarInner {
     gap: 12px;
   }
@@ -504,6 +492,8 @@
 
   .dropdownOpen {
     max-height: 600px;
+    max-height: 60vh;
+    overflow: auto;
 
     padding-top: 4px;
     padding-bottom: 4px;
@@ -633,4 +623,12 @@
     width: 36px;
     height: 36px;
   }
+}
+
+.opacity50 {
+  opacity: 0.25;
+}
+
+.opacity75 {
+  opacity: 0.75;
 }

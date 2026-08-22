@@ -2,6 +2,7 @@
   background: var(--bg);
   border-top: 1px solid var(--border);
   padding: 60px 0 28px;
+  padding: 60px 0 0px;
 }
 
 .Footer__section {
@@ -13,7 +14,7 @@
   align-items: center;
 
   width: 100%;
-  padding: 120px 0 0;
+  padding: 40px 0 40px;
 
   background-color: var(--color-bg-secondary);
   overflow: hidden;
@@ -165,6 +166,7 @@
 
   .Footer__giantTextContainer {
     bottom: -5px;
+    bottom: 0px;
     padding-left: 10px;
   }
 
