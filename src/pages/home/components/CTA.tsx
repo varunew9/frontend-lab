@@ -33,7 +33,7 @@ export function CTA() {
         </div>
 
         <div className={styles.ctaActions}>
-          <Button variant="primary" className="px-4 py-3" onClick={() => navigate("/counter")}>
+          <Button variant="primary" className="px-4 py-3" onClick={() => navigate("/features/counter")}>
             Start Learning
             <CircleArrowRight />
           </Button>
