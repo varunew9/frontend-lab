@@ -35,7 +35,6 @@ A modern React + TypeScript frontend playground for building, experimenting with
 
 - SCSS / Sass
 - CSS Modules
-- Bootstrap
 - Custom CSS variables
 - Responsive design
 - Custom utility classes
