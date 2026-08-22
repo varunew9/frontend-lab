@@ -22,7 +22,7 @@ export function Hero() {
         <p className={styles.heroDescription}>Learn by building real-world projects that combine UI development, state management, API integration, form validation, responsive design, performance optimization, and modern frontend architecture.</p>
 
         <div className={styles.heroActions}>
-          <Button variant="primary" className="px-4 py-3" onClick={() => navigate("/counter")}>
+          <Button variant="primary" className="px-4 py-3" onClick={() => navigate("/features/counter")}>
             Start from Basics
           </Button>
 
