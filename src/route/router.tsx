@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
 
-import { CalculatorPage, DigitalClockPage, Home, ProfileCardGenratorPage, ThemeChangerPage, FeaturesLayout, ComingSoon, ShoppingCart, CounterPage, Features } from "../pages";
+import { CalculatorPage, DigitalClockPage, Home, ProfileCardGenratorPage, ThemeChangerPage, FeaturesLayout, ComingSoon, ShoppingCart, CounterPage, Features, BackgroundChanger, RandomQuotePage } from "../pages";
 
 import NotFound from "../pages/notFound/NotFound";
 import { AccordionPage } from "../pages/features/accordion/AccordionPage";
@@ -57,6 +57,14 @@ export const router = createBrowserRouter([
           {
             path: "accordion",
             element: <AccordionPage />,
+          },
+          {
+            path: "background-changer",
+            element: <BackgroundChanger />,
+          },
+          {
+            path: "random-quote",
+            element: <RandomQuotePage />,
           },
           // Comming Soon
           {

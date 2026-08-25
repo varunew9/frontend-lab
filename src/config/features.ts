@@ -59,10 +59,11 @@ export const features: Feature[] = [
   {
     path: "/background-changer",
     title: "Background Changer",
-    description: "Dynamic colors with controlled input",
+    description: "Emotion-based backgrounds with cinematic visual effects",
     icon: Contrast,
-    status: "planned",
+    status: "completed",
   },
+
   {
     path: "/calculator",
     title: "Calculator",
@@ -82,7 +83,7 @@ export const features: Feature[] = [
     title: "Random Quote",
     description: "Fetch and display random quotes",
     icon: Quote,
-    status: "planned",
+    status: "completed",
   },
   {
     path: "/live-search",

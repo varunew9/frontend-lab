@@ -1,4 +1,3 @@
-import { CTA } from "./components/CTA";
 import { Hero } from "./components/Hero";
 import { LearningJourney } from "./components/LearningJourney";
 import { Proof } from "./components/Proof";
@@ -21,8 +20,6 @@ export function Home() {
       <TechStack />
 
       <LearningJourney />
-
-      <CTA />
     </main>
   );
 }

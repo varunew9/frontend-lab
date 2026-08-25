@@ -8,3 +8,5 @@ export { CalculatorPage } from "./features/calculator/CalculatorPage";
 export { FeaturesLayout } from "./features/FeaturesLayout";
 export { ComingSoon } from "./comingSoon/ComingSoon";
 export { ShoppingCart } from "./features/shoppingCart/ShoppingCart";
+export { BackgroundChanger } from "./features/backgroundChanger/BackgroundChanger";
+export { RandomQuotePage } from "./features/randomQuote/RandomQuotePage";

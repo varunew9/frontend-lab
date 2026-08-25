@@ -164,10 +164,10 @@ export const features: readonly FeatureProject[] = [
   {
     id: "day-05-background-color-changer",
     // day: 5,
-    title: "Dynamic Background Color Changer",
-    description: "An interactive color changer demonstrating form input handling, controlled values, and dynamic styling in React.",
+    title: "Emotion Background Changer",
+    description: "A cinematic React experience where each emotion transforms the background with unique colors, lighting, and visual effects.",
     category: "Events & Forms",
-    technologies: ["React", "JavaScript", "Forms", "Inline Styles"],
+    technologies: ["React", "JavaScript", "SCSS", "Dynamic Styling", "CSS Animations"],
     status: "completed",
     featured: false,
   },
@@ -192,7 +192,7 @@ export const features: readonly FeatureProject[] = [
     technologies: ["React", "JavaScript", "Forms", "Events"],
     status: "completed",
     featured: true,
-    path: "/calculator",
+    path: "/features/calculator",
   },
 
   // ============================================================
@@ -218,8 +218,9 @@ export const features: readonly FeatureProject[] = [
     description: "A quote generator that demonstrates asynchronous data fetching and rendering data from a public REST API.",
     category: "API Integration",
     technologies: ["React", "JavaScript", "Fetch API", "REST API"],
-    status: "planned",
-    featured: false,
+    status: "completed",
+    featured: true,
+    path: "/features/random-quote",
   },
 
   {

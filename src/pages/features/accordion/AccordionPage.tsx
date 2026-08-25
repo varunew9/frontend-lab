@@ -75,7 +75,7 @@ const faqs: {
 
 export function AccordionPage() {
   return (
-    <Section id="hero" className="mb-4">
+    <Section id="hero" className="mt-4 mb-4">
       <div className="text-center">
         <Heading element="span" variant="badge">
           React Compound Component
